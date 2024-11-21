@@ -1,0 +1,639 @@
+{
+    "Algeria": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Wheat"
+    ],
+    "Angola": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sweet potatoes",
+        "Wheat",
+        "Sorghum",
+        "Soybeans"
+    ],
+    "Argentina": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Australia": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Azerbaijan": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Bangladesh": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Wheat",
+        "Soybeans"
+    ],
+    "Brazil": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Bulgaria": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Burkina Faso": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Yams"
+    ],
+    "Burundi": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Cameroon": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Canada": [
+        "Maize",
+        "Potatoes",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Central African Republic": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Yams"
+    ],
+    "Chile": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Colombia": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat",
+        "Yams"
+    ],
+    "Croatia": [
+        "Maize",
+        "Potatoes",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Dominican Republic": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Yams"
+    ],
+    "Ecuador": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Egypt": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "El Salvador": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes"
+    ],
+    "France": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Germany": [
+        "Maize",
+        "Potatoes",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Ghana": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Rice, paddy",
+        "Sorghum",
+        "Yams",
+        "Sweet potatoes"
+    ],
+    "Greece": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Guatemala": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat",
+        "Sweet potatoes"
+    ],
+    "Guinea": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Yams",
+        "Potatoes"
+    ],
+    "Guyana": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Rice, paddy",
+        "Sweet potatoes",
+        "Yams"
+    ],
+    "Haiti": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Yams"
+    ],
+    "Honduras": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Wheat",
+        "Soybeans"
+    ],
+    "Hungary": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "India": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Indonesia": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Soybeans",
+        "Sweet potatoes"
+    ],
+    "Iraq": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Italy": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Jamaica": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sweet potatoes",
+        "Yams"
+    ],
+    "Japan": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Kazakhstan": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Kenya": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Libya": [
+        "Maize",
+        "Potatoes",
+        "Wheat"
+    ],
+    "Madagascar": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Malawi": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Wheat",
+        "Soybeans"
+    ],
+    "Mali": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Mauritania": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Mauritius": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sweet potatoes"
+    ],
+    "Mexico": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Morocco": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Mozambique": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Nepal": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Nicaragua": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Yams"
+    ],
+    "Niger": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Pakistan": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Papua New Guinea": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes",
+        "Yams"
+    ],
+    "Peru": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Portugal": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Romania": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Rwanda": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat",
+        "Yams"
+    ],
+    "Saudi Arabia": [
+        "Maize",
+        "Potatoes",
+        "Sorghum",
+        "Wheat"
+    ],
+    "Senegal": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Sweet potatoes"
+    ],
+    "South Africa": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Spain": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Sri Lanka": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes"
+    ],
+    "Suriname": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Rice, paddy",
+        "Soybeans",
+        "Sweet potatoes"
+    ],
+    "Tajikistan": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Thailand": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "Turkey": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Soybeans",
+        "Wheat",
+        "Sorghum"
+    ],
+    "Uganda": [
+        "Cassava",
+        "Maize",
+        "Plantains and others",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Ukraine": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Wheat"
+    ],
+    "United Kingdom": [
+        "Potatoes",
+        "Wheat"
+    ],
+    "Uruguay": [
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Zambia": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "Zimbabwe": [
+        "Cassava",
+        "Maize",
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ]
+}

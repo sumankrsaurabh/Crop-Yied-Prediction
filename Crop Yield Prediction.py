@@ -1,50 +1,100 @@
 import warnings
-
-warnings.filterwarnings("ignore")
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OrdinalEncoder
+import pickle
+import json
 
+warnings.filterwarnings("ignore")
 
-
+# Load and preprocess the dataset
 df = pd.read_csv("yield_df.csv")
-df.drop("Unnamed: 0", axis=1, inplace=True)
+df.drop("Unnamed: 0", axis=1, inplace=True, errors="ignore")
 
+# Filter countries with less than 100 data points
+countries_to_drop = df["Area"].value_counts()[lambda x: x < 100].index
+df = df[~df["Area"].isin(countries_to_drop)].reset_index(drop=True)
 
-country_counts = df["Area"].value_counts()
-countries_to_drop = country_counts[country_counts < 100].index.tolist()
-df_filtered = df[~df["Area"].isin(countries_to_drop)]
-df = df_filtered.reset_index(drop=True)
+# Extract unique countries and corresponding items
+country_item_dict = df.groupby("Area")["Item"].unique().to_dict()
 
-datacorr = df.copy()
+# Ensure all items are strings or serializable
+# Convert items to strings if necessary
+for country in country_item_dict:
+    country_item_dict[country] = [str(item) for item in country_item_dict[country]]
 
+# Save to a JSON file
+with open("country_item_dict.json", "w") as json_file:
+    json.dump(country_item_dict, json_file, indent=4)
 
-categorical_columns = datacorr.select_dtypes(include=["object"]).columns.tolist()
-label_encoder = LabelEncoder()
-for column in categorical_columns:
-    datacorr[column] = label_encoder.fit_transform(datacorr[column])
+print("Country-Item list saved to country_item_dict.json")
 
+# Encode categorical variables
+categorical_columns = ["Area", "Item"]
+encoder = OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)
+df[categorical_columns] = encoder.fit_transform(df[categorical_columns])
 
-X, y = datacorr.drop(labels="hg/ha_yield", axis=1), datacorr["hg/ha_yield"]
+# Split data into features and target
+X = df[
+    [
+        "Area",
+        "Item",
+        "Year",
+        "average_rain_fall_mm_per_year",
+        "pesticides_tonnes",
+        "avg_temp",
+    ]
+]
+y = df["hg/ha_yield"]
 
+# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42
 )
 
-results = []
+# Train the model
+model = RandomForestRegressor(random_state=42)
+model.fit(X_train, y_train)
 
-models = [("Random Forest", RandomForestRegressor(random_state=42))]
+# Save the model to a file using pickle
+model_file = "crop_yield_model.pkl"
+with open(model_file, "wb") as f:
+    pickle.dump(model, f)
+print(f"Model saved to {model_file}")
 
-for name, model in models:
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-    accuracy = model.score(X_test, y_test)
-    MSE = mean_squared_error(y_test, y_pred)
-    R2_score = r2_score(y_test, y_pred)
-    results.append((name, accuracy, MSE, R2_score))
-    acc = model.score(X_train, y_train) * 100
-    print(f"The accuracy of the {name} Model Train is {acc:.2f}")
-    acc = model.score(X_test, y_test) * 100
-    print(f"The accuracy of the  {name} Model Test is {acc:.2f}")
+# Save the encoder to a file using pickle
+encoder_file = "ordinal_encoder.pkl"
+with open(encoder_file, "wb") as f:
+    pickle.dump(encoder, f)
+print(f"Encoder saved to {encoder_file}")
+
+# Evaluate the model
+y_pred = model.predict(X_test)
+print(f"Train Accuracy: {model.score(X_train, y_train) * 100:.2f}%")
+print(f"Test Accuracy: {model.score(X_test, y_test) * 100:.2f}%")
+print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
+print(f"R² Score: {r2_score(y_test, y_pred):.2f}")
+
+# Feature importance
+feature_importances = pd.DataFrame(
+    {"Feature": X.columns, "Importance": model.feature_importances_}
+).sort_values(by="Importance", ascending=False)
+print("\nFeature Importances:")
+print(feature_importances)
+
+# Predict for a sample input
+sample_input = pd.DataFrame(
+    {
+        "Area": ["India"],
+        "Item": ["Wheat"],
+        "Year": [2024],
+        "average_rain_fall_mm_per_year": [1200],
+        "pesticides_tonnes": [450],
+        "avg_temp": [25.5],
+    }
+)
+sample_input[categorical_columns] = encoder.transform(sample_input[categorical_columns])
+predicted_yield = model.predict(sample_input)
+print(f"\nPredicted Yield (hg/ha) for Sample Input: {predicted_yield[0]:.2f}")
