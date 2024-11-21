@@ -1,1 +1,4 @@
 venv
+ordinal_encoder.pkl
+crop_yield_model.pkl
+country_item_dict.json
