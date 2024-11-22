@@ -77,12 +77,6 @@ print(f"Test Accuracy: {model.score(X_test, y_test) * 100:.2f}%")
 print(f"Mean Squared Error: {mean_squared_error(y_test, y_pred):.2f}")
 print(f"R² Score: {r2_score(y_test, y_pred):.2f}")
 
-# Feature importance
-feature_importances = pd.DataFrame(
-    {"Feature": X.columns, "Importance": model.feature_importances_}
-).sort_values(by="Importance", ascending=False)
-print("\nFeature Importances:")
-print(feature_importances)
 
 # Predict for a sample input
 sample_input = pd.DataFrame(
@@ -92,7 +86,7 @@ sample_input = pd.DataFrame(
         "Year": [2024],
         "average_rain_fall_mm_per_year": [1200],
         "pesticides_tonnes": [450],
-        "avg_temp": [25.5],
+        "avg_temp": [25],
     }
 )
 sample_input[categorical_columns] = encoder.transform(sample_input[categorical_columns])

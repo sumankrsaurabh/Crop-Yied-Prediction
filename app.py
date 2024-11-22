@@ -1,8 +1,10 @@
 import json
 import pickle
+import warnings
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 
+warnings.filterwarnings("ignore")
 
 # Load the saved model and encoder
 with open("crop_yield_model.pkl", "rb") as f:
