@@ -111,26 +111,6 @@
         <form id="predictionForm">
             <div class="row">
                 <div class="form-group">
-                    <label for="Year">Year</label>
-                    <input type="number" id="year" name="Year" step="1" placeholder="eg. 2024" required>
-                </div>
-                <div class="form-group">
-                    <label for="average_rain_fall_mm_per_year">Average Rainfall (mm per year)</label>
-                    <input type="number" id="rainfall" name="average_rain_fall_mm_per_year" placeholder="eg. 1000" step="any" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
-                    <label for="pesticides_tonnes">Pesticides Used (tonnes)</label>
-                    <input type="number" id="pesticides" name="pesticides_tonnes" placeholder="eg. 100" step="any" required>
-                </div>
-                <div class="form-group">
-                    <label for="avg_temp">Average Temperature (°C)</label>
-                    <input type="number" id="temp" name="avg_temp" placeholder="eg. 20" step="any" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
                     <label for="Area">Area</label>
                     <select id="area" name="Area" required>
                         <option value="">Select Area</option>
@@ -146,7 +126,28 @@
                     </select>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="form-group">
+                    <label for="Year">Year</label>
+                    <input type="number" id="year" name="Year" step="1" placeholder="eg. 2024" required>
+                </div>
+                <div class="form-group">
+                    <label for="average_rain_fall_mm_per_year">Average Rainfall (mm per year)</label>
+                    <input type="number" id="rainfall" name="average_rain_fall_mm_per_year" placeholder="eg. 1000"
+                        step="any" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="pesticides_tonnes">Pesticides Used (tonnes)</label>
+                    <input type="number" id="pesticides" name="pesticides_tonnes" placeholder="eg. 100" step="any"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="avg_temp">Average Temperature (°C)</label>
+                    <input type="number" id="temp" name="avg_temp" placeholder="eg. 20" step="any" required>
+                </div>
+            </div>
             <button type="submit" id="predictButton">Predict</button>
         </form>
 
@@ -218,7 +219,7 @@
 
                 if (response.ok) {
                     const result = await response.json();
-                    document.getElementById("result").textContent = `Predicted Yield: ${result.predicted_yield} hg/ha`;
+                    document.getElementById("result").textContent = `Predicted Yield: ${result.predicted_yield} kg/ha`;
                 } else {
                     document.getElementById("result").textContent = "Failed to predict. Please check input values.";
                 }

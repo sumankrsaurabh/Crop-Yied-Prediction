@@ -71,8 +71,8 @@ def predict():
         sample_df[["Area", "Item"]] = encoder.transform(sample_df[["Area", "Item"]])
 
         # Make prediction
-        prediction = model.predict(sample_df)[0]
-
+        prediction = (model.predict(sample_df)[0]) / 10
+        print("Prediction : ",prediction)
         # Return the prediction as a JSON response
         return jsonify({"predicted_yield": round(prediction, 2)})
 
