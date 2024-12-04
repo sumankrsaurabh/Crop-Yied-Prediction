@@ -30,7 +30,6 @@ with open("country_item_dict.json", "w") as json_file:
     json.dump(country_item_dict, json_file, indent=4)
 
 print("Country-Item list saved to country_item_dict.json")
-
 # Encode categorical variables
 categorical_columns = ["Area", "Item"]
 encoder = OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)
@@ -92,3 +91,65 @@ sample_input = pd.DataFrame(
 sample_input[categorical_columns] = encoder.transform(sample_input[categorical_columns])
 predicted_yield = model.predict(sample_input)
 print(f"\nPredicted Yield (hg/ha) for Sample Input: {predicted_yield[0]:.2f}")
+
+
+
+
+
+# from sklearn.linear_model import LinearRegression
+# from sklearn.tree import DecisionTreeRegressor
+# from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+# from sklearn.neighbors import KNeighborsRegressor
+# from sklearn.svm import SVR
+# from sklearn.metrics import mean_absolute_error, r2_score
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+
+# # Initialize models
+# models = {
+#     "Linear Regression": LinearRegression(),
+#     "Decision Tree": DecisionTreeRegressor(),
+#     "Random Forest": RandomForestRegressor(random_state=42),
+#     "Support Vector Regression": SVR(kernel="rbf"),
+#     "Gradient Boosting": GradientBoostingRegressor(random_state=42),
+#     "K-Nearest Neighbors": KNeighborsRegressor(),
+# }
+
+# # Store results
+# performance_results = []
+
+# # Train and evaluate each model
+# for model_name, model in models.items():
+#     model.fit(X_train, y_train)  # Train the model
+#     y_pred = model.predict(X_test)  # Make predictions
+
+#     # Calculate metrics
+#     mae = mean_absolute_error(y_test, y_pred)
+#     r2 = r2_score(y_test, y_pred)
+
+#     # Append results
+#     performance_results.append({"Model": model_name, "MAE": mae, "R² Score": r2})
+
+# # Convert results to a DataFrame
+# performance_df = pd.DataFrame(performance_results)
+# print(performance_df)
+# plt.figure(figsize=(12, 6))
+# sns.barplot(x="Model", y="MAE", data=performance_df, palette="viridis")
+
+# plt.title("Model Comparison: Mean Absolute Error (MAE)", fontsize=16, fontweight="bold")
+# plt.xlabel("Machine Learning Models", fontsize=14, fontweight="bold")
+# plt.ylabel("Mean Absolute Error (MAE)", fontsize=14, fontweight="bold")
+# plt.xticks(rotation=45, ha="right", fontsize=12)
+# plt.tight_layout()
+# plt.savefig("actual_model_mae_comparison.png")
+# plt.show()
+# plt.figure(figsize=(12, 6))
+# sns.barplot(x="Model", y="R² Score", data=performance_df, palette="coolwarm")
+
+# plt.title("Model Comparison: R² Score", fontsize=16, fontweight="bold")
+# plt.xlabel("Machine Learning Models", fontsize=14, fontweight="bold")
+# plt.ylabel("R² Score", fontsize=14, fontweight="bold")
+# plt.xticks(rotation=45, ha="right", fontsize=12)
+# plt.tight_layout()
+# plt.savefig("actual_model_r2_comparison.png")
+# plt.show()
